@@ -64,6 +64,12 @@
     <Compile Include="EdadMensajes.Designer.cs">
       <DependentUpon>EdadMensajes.cs</DependentUpon>
     </Compile>
+    <Compile Include="NumeroBinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NumeroBinario.Designer.cs">
+      <DependentUpon>NumeroBinario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Primo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EdadMensajes.resx">
       <DependentUpon>EdadMensajes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NumeroBinario.resx">
+      <DependentUpon>NumeroBinario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Primo.resx">
       <DependentUpon>Primo.cs</DependentUpon>
