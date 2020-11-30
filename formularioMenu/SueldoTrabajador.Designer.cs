@@ -44,14 +44,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTotalIng = new System.Windows.Forms.TextBox();
-            this.txtBono = new System.Windows.Forms.TextBox();
-            this.txtValorHora = new System.Windows.Forms.TextBox();
             this.txtHorasTrabajadas = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtValorHora = new System.Windows.Forms.TextBox();
+            this.txtBono = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,7 @@
             this.txtNombre.Size = new System.Drawing.Size(262, 20);
             this.txtNombre.TabIndex = 12;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // label2
             // 
@@ -148,6 +149,7 @@
             this.txtCuentaPorPagar.Name = "txtCuentaPorPagar";
             this.txtCuentaPorPagar.Size = new System.Drawing.Size(100, 24);
             this.txtCuentaPorPagar.TabIndex = 6;
+            this.txtCuentaPorPagar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCuentaPorPagar_KeyPress);
             // 
             // txtBar
             // 
@@ -157,6 +159,7 @@
             this.txtBar.Name = "txtBar";
             this.txtBar.Size = new System.Drawing.Size(100, 24);
             this.txtBar.TabIndex = 5;
+            this.txtBar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBar_KeyPress);
             // 
             // txtAsoTrabajadores
             // 
@@ -166,6 +169,7 @@
             this.txtAsoTrabajadores.Name = "txtAsoTrabajadores";
             this.txtAsoTrabajadores.Size = new System.Drawing.Size(100, 24);
             this.txtAsoTrabajadores.TabIndex = 4;
+            this.txtAsoTrabajadores.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAsoTrabajadores_KeyPress);
             // 
             // label10
             // 
@@ -210,9 +214,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtTotalIng);
             this.groupBox1.Controls.Add(this.txtBono);
             this.groupBox1.Controls.Add(this.txtValorHora);
+            this.groupBox1.Controls.Add(this.txtTotalIng);
             this.groupBox1.Controls.Add(this.txtHorasTrabajadas);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
@@ -235,24 +239,6 @@
             this.txtTotalIng.Size = new System.Drawing.Size(100, 24);
             this.txtTotalIng.TabIndex = 7;
             // 
-            // txtBono
-            // 
-            this.txtBono.BackColor = System.Drawing.SystemColors.Info;
-            this.txtBono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtBono.Location = new System.Drawing.Point(218, 93);
-            this.txtBono.Name = "txtBono";
-            this.txtBono.Size = new System.Drawing.Size(100, 24);
-            this.txtBono.TabIndex = 6;
-            // 
-            // txtValorHora
-            // 
-            this.txtValorHora.BackColor = System.Drawing.SystemColors.Info;
-            this.txtValorHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtValorHora.Location = new System.Drawing.Point(218, 60);
-            this.txtValorHora.Name = "txtValorHora";
-            this.txtValorHora.Size = new System.Drawing.Size(100, 24);
-            this.txtValorHora.TabIndex = 5;
-            // 
             // txtHorasTrabajadas
             // 
             this.txtHorasTrabajadas.BackColor = System.Drawing.SystemColors.Info;
@@ -261,6 +247,8 @@
             this.txtHorasTrabajadas.Name = "txtHorasTrabajadas";
             this.txtHorasTrabajadas.Size = new System.Drawing.Size(100, 24);
             this.txtHorasTrabajadas.TabIndex = 4;
+            this.txtHorasTrabajadas.TextChanged += new System.EventHandler(this.txtHorasTrabajadas_TextChanged);
+            this.txtHorasTrabajadas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHorasTrabajadas_KeyPress);
             // 
             // label6
             // 
@@ -314,6 +302,22 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Sueldo del trabajador";
             // 
+            // txtValorHora
+            // 
+            this.txtValorHora.Location = new System.Drawing.Point(218, 65);
+            this.txtValorHora.Name = "txtValorHora";
+            this.txtValorHora.Size = new System.Drawing.Size(100, 24);
+            this.txtValorHora.TabIndex = 8;
+            this.txtValorHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorHora_KeyPress);
+            // 
+            // txtBono
+            // 
+            this.txtBono.Location = new System.Drawing.Point(218, 98);
+            this.txtBono.Name = "txtBono";
+            this.txtBono.Size = new System.Drawing.Size(100, 24);
+            this.txtBono.TabIndex = 9;
+            this.txtBono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBono_KeyPress_1);
+            // 
             // SueldoTrabajador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -357,13 +361,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtTotalIng;
-        private System.Windows.Forms.TextBox txtBono;
-        private System.Windows.Forms.TextBox txtValorHora;
         private System.Windows.Forms.TextBox txtHorasTrabajadas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBono;
+        private System.Windows.Forms.TextBox txtValorHora;
     }
 }
