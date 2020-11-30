@@ -58,6 +58,12 @@
     <Compile Include="Calendario.Designer.cs">
       <DependentUpon>Calendario.cs</DependentUpon>
     </Compile>
+    <Compile Include="EdadMensajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdadMensajes.Designer.cs">
+      <DependentUpon>EdadMensajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BinarioDecimal.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Calendario.resx">
       <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EdadMensajes.resx">
+      <DependentUpon>EdadMensajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
