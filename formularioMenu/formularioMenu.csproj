@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SueldoTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SueldoTrabajador.Designer.cs">
+      <DependentUpon>SueldoTrabajador.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BinarioDecimal.resx">
       <DependentUpon>BinarioDecimal.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +90,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SueldoTrabajador.resx">
+      <DependentUpon>SueldoTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

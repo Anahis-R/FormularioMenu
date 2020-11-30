@@ -42,9 +42,8 @@
             this.lbRespuesta.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRespuesta.Location = new System.Drawing.Point(26, 119);
             this.lbRespuesta.Name = "lbRespuesta";
-            this.lbRespuesta.Size = new System.Drawing.Size(87, 21);
+            this.lbRespuesta.Size = new System.Drawing.Size(0, 21);
             this.lbRespuesta.TabIndex = 11;
-            this.lbRespuesta.Text = "Respuesta";
             // 
             // txtEdad
             // 
